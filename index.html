@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KSXYR9FP1L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KSXYR9FP1L');
+</script>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Oval Base calculator｜CroCroCrochet</title>
+
+    <meta
+        name="description"
+        content="免費 Crochet Oval base calculator，可快速計算橢圓、圓形及方形包底。"
+    >
+
+    <meta
+        name="keywords"
+        content="crochet, crochet base, crochet calculator, 包底, 鉤針, 鉤織"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <meta
+        property="og:title"
+        content="CroCroCrochet Oval base calculator"
+    >
+
+    <meta
+        property="og:description"
+        content="免費鉤針包底計算工具，快速計算橢圓、方形及圓形包底。"
+    >
+
+    <meta
+        property="og:image"
+        content="https://crocrocrochet.github.io/-crochet-base-calculator/cover.jpg"
+    >
+
+    <meta
+        property="og:url"
+        content="https://crocrocrochet.github.io/-crochet-base-calculator/"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="CroCroCrochet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero-section">
+
+    <!-- 品牌資料 -->
+    <div class="hero-info">
+
+        <header class="site-header">
+            <img
+                src="logo.png"
+                alt="CroCroCrochet Logo"
+                class="site-logo"
+            >
+
+            <div class="site-title-group">
+                <h1>Oval base calculator</h1>
+                <p class="site-name">@crocrocrochet_</p>
+            </div>
+        </header>
+
+        <div class="rule-guide">
+            <h2 class="rule-guide-title">
+                Rules of Increasing
+            </h2>
+
+            <div class="rule-button-group">
+                <button
+                    type="button"
+                    class="rule-button"
+                    data-rule-target="ovalRulePanel"
+                >
+                    Oval
+                </button>
+
+                <button
+                    type="button"
+                    class="rule-button"
+                    data-rule-target="squareRulePanel"
+                >
+                    Square
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 封面 -->
+    <div class="website-cover">
+        <img
+            src="cover.png"
+            alt="CroCroCrochet Oval base calculator封面"
+        >
+    </div>
+
+</section>
+
+<!-- Oval面板 -->
+<section
+    id="ovalRulePanel"
+    class="rule-panel"
+    hidden
+>
+    <div class="rule-panel-header">
+        <h3>Oval</h3>
+
+        <button
+            type="button"
+            class="rule-close-button"
+            aria-label="關閉Oval"
+        >
+            ×
+        </button>
+    </div>
+
+    <div class="rule-image-list">
+        <img
+            src="oval-rule-1.png"
+            alt="橢圓包底第一圈及第二圈加針規律"
+            loading="lazy"
+        >
+
+        <img
+            src="oval-rule-2.png"
+            alt="橢圓包底第三圈及第四圈加針規律"
+            loading="lazy"
+        >
+
+        <img
+            src="oval-rule-3.png"
+            alt="橢圓包底起針十一針的加針範例"
+            loading="lazy"
+        >
+
+        <img
+            src="oval-rule-4.png"
+            alt="橢圓包底每組加針規律"
+            loading="lazy"
+        >
+    </div>
+</section>
+
+<!-- Square面板 -->
+<section
+    id="squareRulePanel"
+    class="rule-panel"
+    hidden
+>
+    <div class="rule-panel-header">
+        <h3>Square</h3>
+
+        <button
+            type="button"
+            class="rule-close-button"
+            aria-label="關閉Square"
+        >
+            ×
+        </button>
+    </div>
+
+    <div class="rule-image-list">
+        <img
+            src="oval-rule-5.png"
+            alt="方形包底加針規律"
+            loading="lazy"
+        >
+    </div>
+</section>
+  
+
+        <p class="instruction">Please select two out of the following three options to fill in.</p>
+
+        <label for="patternSize">number of stitches in per row of a pattern </label>
+        <input
+            type="number"
+            id="patternSize"
+            min="1"
+            step="1"
+            placeholder="e.g. 8"
+        >
+
+        <label for="patternCount">number of patterns repeat</label>
+        <input
+            type="number"
+            id="patternCount"
+            min="1"
+            step="1"
+            placeholder="e.g. 12"
+        >
+
+        <label for="totalStitches">approximate total stitch count</label>
+        <input
+            type="number"
+            id="totalStitches"
+            min="1"
+            step="1"
+            placeholder="e.g. 96"
+        >
+
+        <button id="calculateBtn">
+            calculate
+        </button>
+
+        <div id="result" aria-live="polite">
+            Result:
+        </div>
+
+    
+
+    
+
+
+    <div class="dynamic-watermark" aria-hidden="true">
+        @crocrocrochet
+    </div>
+
+
+
+
+    
+<script src="translations.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

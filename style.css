@@ -1,0 +1,1223 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background:
+        linear-gradient(
+            180deg,
+            #f4eee8 0%,
+            #f8f5f1 100%
+        );
+    color: #2b241e;
+    font-family:
+        Arial,
+        "Microsoft JhengHei",
+        sans-serif;
+}
+
+.container {
+    width: min(100%, 920px);
+    margin: 0 auto;
+    padding: 42px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow:
+        0 18px 50px rgba(88, 69, 52, 0.12);
+}
+
+h1 {
+    margin: 0 0 14px;
+    color: #6e5945;
+    font-size: 38px;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+.instruction {
+    margin: 0 0 34px;
+    color: #8c7a69;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* =========================
+   輸入區
+========================= */
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #675543;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d8ccc1;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2b241e;
+    font-size: 17px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #a88e76;
+    box-shadow: 0 0 0 3px rgba(168, 142, 118, 0.15);
+}
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    border: none;
+    border-radius: 18px;
+    background-color: #8c735d;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #745d49;
+}
+
+
+/* =========================
+   一般結果訊息
+========================= */
+
+#result {
+    margin-top: 32px;
+}
+
+#result.error,
+#result.adjustment,
+#result.success {
+    padding: 20px;
+    border-radius: 18px;
+    line-height: 1.8;
+}
+
+#result.error {
+    background-color: #fff0f0;
+    color: #a52d36;
+}
+
+#result.adjustment {
+    background-color: #fff8e6;
+    color: #6b4e00;
+}
+
+#result.success {
+    background-color: #edf6ed;
+    color: #315b35;
+}
+
+#result.plans-result {
+    padding: 0;
+    background: transparent;
+}
+
+
+/* =========================
+   設定資料
+========================= */
+
+.result-summary {
+    max-width: 680px;
+    margin: 0 auto 50px;
+    padding: 24px 30px;
+    border-radius: 24px;
+    background-color: #eaf3e8;
+}
+
+.summary-title {
+    margin-bottom: 16px;
+    color: #53654f;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 7px 0;
+    font-size: 18px;
+}
+
+.summary-row strong {
+    text-align: right;
+}
+
+
+/* =========================
+   區域標題
+========================= */
+
+.recommended-section,
+.other-section {
+    margin-top: 46px;
+}
+
+.main-section-title {
+    margin: 0 0 38px;
+    color: #594738;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+.main-section-title::after {
+    display: block;
+    width: 54px;
+    height: 2px;
+    margin: 14px auto 0;
+    background-color: #bba998;
+    content: "";
+}
+
+
+/* =========================
+   卡片排列
+========================= */
+
+.featured-plan {
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.two-column-plans,
+.other-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   方案卡片
+========================= */
+
+.plan-card {
+    min-width: 0;
+    margin: 0;
+    overflow: visible;
+    border: none;
+    background-color: transparent;
+}
+
+.plan-card-title {
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    max-width: calc(100% - 36px);
+    margin: 0 auto -2px;
+    padding: 12px 30px;
+    border-radius: 20px 20px 0 0;
+    background-color: #e8ddd3;
+    color: #725d49;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+.plan-card-body {
+    min-height: 100%;
+    padding: 30px 32px;
+    border: 1px solid rgba(154, 130, 108, 0.12);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.94);
+    box-shadow:
+        0 12px 30px rgba(91, 70, 52, 0.08);
+}
+
+.plan-shape-description {
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #d8cdc4;
+    color: #826d5a;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.plan-info-grid {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 15px 20px;
+    align-items: start;
+}
+
+.plan-label {
+    color: #746556;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.plan-value {
+    min-width: 0;
+    color: #2f2924;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.round-total-title {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eee7e1;
+    color: #746556;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.round-total-list {
+    width: min(100%, 320px);
+    margin-top: 12px;
+    margin-left: auto;
+}
+
+.round-total-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px 0;
+    color: #4a4139;
+    font-size: 16px;
+}
+
+.round-total-item strong {
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+
+/* =========================
+   不同形狀色彩
+========================= */
+
+.standard-card .plan-card-title,
+.recommended-card .plan-card-title {
+    background-color: #e7ddd3;
+    color: #6f5946;
+}
+
+.circle-card .plan-card-title {
+    background-color: #e7e0ed;
+    color: #695878;
+}
+
+.square-card .plan-card-title {
+    background-color: #eee6c9;
+    color: #756834;
+}
+
+.same-oval-card .plan-card-title {
+    background-color: #e8e5e1;
+    color: #655f59;
+}
+
+.fewer-oval-card .plan-card-title {
+    background-color: #dfeaf0;
+    color: #526d7c;
+}
+
+.more-oval-card .plan-card-title {
+    background-color: #f0dfd0;
+    color: #865e43;
+}
+
+
+/* =========================
+   其他方案群組
+========================= */
+
+.other-plan-group {
+    margin-bottom: 48px;
+}
+
+.group-title {
+    margin: 0 0 24px;
+    color: #6f5b49;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+.empty-plan-message {
+    max-width: 680px;
+    margin: 0 auto 30px;
+    padding: 22px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #85776b;
+    text-align: center;
+}
+
+
+/* =========================
+   說明
+========================= */
+
+.result-note {
+    max-width: 680px;
+    margin: 20px auto 0;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background-color: #fff6e6;
+    color: #765a2d;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 700px) {
+    body {
+        padding: 18px 12px;
+    }
+
+    .container {
+        padding: 26px 18px;
+        border-radius: 26px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .two-column-plans,
+    .other-plan-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .featured-plan {
+        max-width: none;
+    }
+
+    .plan-card-title {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .plan-card-body {
+        padding: 26px 22px;
+        border-radius: 26px;
+    }
+
+    .plan-info-grid {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 13px 12px;
+    }
+
+    .plan-label,
+    .plan-value,
+    .round-total-title {
+        font-size: 16px;
+    }
+
+    .round-total-list {
+        width: 100%;
+    }
+
+    .main-section-title {
+        font-size: 25px;
+    }
+}
+
+/* 校正總針數：與輸入值相同 */
+.total-stitch-value.total-matched {
+    color: #27843a;
+    font-weight: 800;
+}
+
+/* 校正總針數：與輸入值不同 */
+.total-stitch-value.total-adjusted {
+    color: #c53b3b;
+    font-weight: 800;
+}
+
+/* =========================
+   全頁文字縮小至約 80%
+========================= */
+
+h1 {
+    font-size: 30px;
+}
+
+.instruction {
+    font-size: 13px;
+}
+
+label {
+    font-size: 13px;
+}
+
+input {
+    font-size: 14px;
+}
+
+button {
+    font-size: 15px;
+}
+
+.summary-title {
+    font-size: 17px;
+}
+
+.summary-row {
+    font-size: 15px;
+}
+
+.main-section-title {
+    font-size: 24px;
+}
+
+.group-title {
+    font-size: 18px;
+}
+
+.plan-card-title {
+    font-size: 18px;
+}
+
+.plan-shape-description {
+    font-size: 13px;
+}
+
+.plan-label,
+.plan-value,
+.round-total-title {
+    font-size: 14px;
+}
+
+.round-total-item {
+    font-size: 13px;
+}
+
+.result-note,
+.empty-plan-message {
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .main-section-title {
+        font-size: 20px;
+    }
+
+    .plan-card-title {
+        font-size: 17px;
+    }
+
+    .plan-label,
+    .plan-value,
+    .round-total-title {
+        font-size: 13px;
+    }
+
+    .round-total-item {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   雙數行淺底色
+========================= */
+
+/* 設定資料的雙數行 */
+.summary-row:nth-child(odd) {
+    background-color: rgba(132, 113, 94, 0.07);
+}
+
+/* 每圈針數的雙數行 */
+.round-total-item:nth-child(even) {
+    background-color: rgba(132, 113, 94, 0.07);
+}
+
+/* 資料格中的第 2、4、6... 行 */
+
+
+.round-total-item {
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+
+/* =========================
+   卡片基本資料列
+========================= */
+
+.plan-info-grid {
+    display: block;
+}
+
+.plan-info-row {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+/* 第 2、4、6……行加入完整淺底色 */
+.plan-info-row:nth-child(even) {
+    background-color: rgba(132, 113, 94, 0.07);
+}
+
+.plan-label {
+    min-width: 0;
+    padding: 0;
+}
+
+.plan-value {
+    min-width: 0;
+    padding: 0;
+    text-align: right;
+    white-space: nowrap;
+    letter-spacing: 0;
+}
+
+
+/* =========================
+   總針數紅綠狀態
+========================= */
+
+/* 與輸入的大約總針數相同 */
+.plan-value.total-stitch-value.total-matched {
+    color: #27843a;
+    font-weight: 800;
+}
+
+/* 經過校正，與輸入值不同 */
+.plan-value.total-stitch-value.total-adjusted {
+    color: #c63737;
+    font-weight: 800;
+}
+
+
+
+
+
+/* =========================
+   每圈針數雙數行
+========================= */
+
+.round-total-item:nth-child(even) {
+    background-color: rgba(132, 113, 94, 0.07);
+}
+
+.round-total-item {
+    padding: 7px 10px;
+    border-radius: 7px;
+}
+
+
+/* =========================
+   小卡片內部空間調整
+========================= */
+
+.two-column-plans .plan-card-body {
+    padding-right: 26px;
+    padding-left: 26px;
+}
+
+.two-column-plans .plan-info-row {
+    grid-template-columns: 80px minmax(0, 1fr);
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 700px) {
+    .plan-info-row,
+    .two-column-plans .plan-info-row {
+        grid-template-columns: 80px minmax(0, 1fr);
+    }
+
+    .starting-method-value {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   動態背景浮水印
+========================= */
+
+.dynamic-watermark {
+    position: fixed;
+    top: 22%;
+    left: -15%;
+
+    z-index: 5;
+
+    color: rgba(120, 84, 55, 0.16);
+    font-size: clamp(44px, 7vw, 96px);
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+
+    pointer-events: none;
+    user-select: none;
+
+    transform: rotate(-18deg);
+
+    animation: watermarkFloat 16s ease-in-out infinite alternate;
+}
+
+/* 主要頁面放在浮水印下方 */
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 讓白色容器稍微透明，浮水印才可透出 */
+.container {
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+@keyframes watermarkFloat {
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(-18deg);
+    }
+
+    50% {
+        transform:
+            translate3d(42vw, 20vh, 0)
+            rotate(-14deg);
+    }
+
+    100% {
+        transform:
+            translate3d(78vw, 46vh, 0)
+            rotate(-20deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dynamic-watermark {
+        animation: none;
+        top: 45%;
+        left: 50%;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(-18deg);
+    }
+}
+
+/* =========================
+   加針規律按鈕
+========================= */
+
+
+
+
+
+
+
+
+
+/* =========================
+   加針規律圖片面板
+========================= */
+
+
+
+.rule-close-button {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #eee7e0;
+    color: #69533f;
+    font-size: 23px;
+    line-height: 1;
+}
+
+.rule-close-button:hover {
+    background-color: #dfd2c7;
+}
+
+.rule-image-list {
+    display: grid;
+    gap: 20px;
+}
+
+.rule-image-list img {
+    display: block;
+
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+
+    margin: 0 auto;
+    border-radius: 18px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 700px) {
+
+
+    
+
+    .rule-image-list {
+        gap: 14px;
+    }
+
+    .rule-image-list img {
+        border-radius: 14px;
+    }
+}
+
+/* =========================
+   語言切換按鈕
+========================= */
+
+.container {
+    position: relative;
+}
+
+
+
+@media (max-width: 700px) {
+    .language-switcher {
+        top: 12px;
+        right: 12px;
+    }
+
+    .language-button {
+        min-width: 58px;
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+
+}
+
+.site-footer{
+
+    margin-top:0px;
+
+    margin-bottom: 10px;
+
+    justify-content: space-between;
+
+    text-align:center;
+
+    color:#e0545d;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+
+.site-name {
+    margin: 4px 0 0;
+    color: #8f7865;
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   頂部品牌與封面排版
+========================= */
+
+
+
+
+.site-title-group {
+    min-width: 0;
+}
+
+
+
+.site-name {
+    margin: 0;
+    color: #9a806c;
+    font-size: 15px;
+}
+
+
+/* 封面 */
+
+
+
+
+/* 左下方加針規律 */
+
+
+
+
+
+
+
+/* =========================
+   手機排版
+========================= */
+
+@media (max-width: 760px) {
+
+    
+
+    
+
+
+   
+
+    .site-name {
+        font-size: 6px;
+        overflow-wrap: anywhere;
+    }
+
+
+
+    
+
+    
+}
+
+/* =====================================
+   頂部品牌區域：電腦版
+===================================== */
+
+.hero-section {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 22px auto 20px;
+
+    display: grid;
+    grid-template-columns: 300px minmax(0, 680px);
+    justify-content: center;
+    align-items: stretch;
+    gap: 34px;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+
+/* Logo 與標題 */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+}
+
+.site-logo {
+    display: block;
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.site-title-group {
+    min-width: 0;
+}
+
+.site-title-group h1 {
+    margin: 0 0 5px;
+    color: #715b49;
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+.site-name {
+    margin: 0;
+    color: #9a806c;
+    font-size: 14px;
+}
+
+
+/* 封面 */
+
+.website-cover {
+    width: 100%;
+    max-width: 680px;
+    margin: 0;
+}
+
+.website-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    max-height: 270px;
+
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+
+/* 規律按鈕 */
+
+.rule-guide {
+    width: 100%;
+    margin: 18px 0 0;
+}
+
+.rule-guide-title {
+    margin: 0 0 10px;
+    color: #312b26;
+    font-size: 19px;
+    text-align: left;
+}
+
+.rule-button-group {
+    display: flex;
+    gap: 9px;
+}
+
+.rule-button {
+    width: auto;
+    min-width: 128px;
+    margin: 0;
+    padding: 9px 12px;
+
+    border: 1px solid #312b26;
+    border-radius: 11px;
+
+    background: #f7f1eb;
+    color: #312b26;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    cursor: pointer;
+}
+
+.rule-button:hover,
+.rule-button.is-active {
+    background: #9d8067;
+    border-color: #9d8067;
+    color: #ffffff;
+}
+
+
+/* =====================================
+   規律圖片面板
+===================================== */
+
+.rule-panel {
+    width: calc(100% - 40px);
+    max-width: 760px;
+    margin: 16px auto 24px;
+    padding: 18px;
+
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e0d2c5;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(90, 68, 50, 0.08);
+}
+
+.rule-panel[hidden] {
+    display: none;
+}
+
+.rule-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.rule-panel-header h3 {
+    margin: 0;
+    color: #715b49;
+    font-size: 20px;
+}
+
+.rule-close-button {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: 0;
+    border-radius: 50%;
+    background: #eee4dc;
+    color: #715b49;
+
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.rule-image-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.rule-image-list img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* =====================================
+   手機版
+===================================== */
+
+@media (max-width: 760px) {
+
+    .hero-section {
+        width: calc(100% - 28px);
+        margin: 14px auto 18px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-info {
+        display: contents;
+    }
+
+    .site-header {
+        order: 1;
+        width: 100%;
+        gap: 11px;
+    }
+
+    .site-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .site-title-group h1 {
+        margin-bottom: 2px;
+        font-size: 21px;
+        white-space: nowrap;
+    }
+
+    .site-name {
+        font-size: 12px;
+    }
+
+    .website-cover {
+        order: 2;
+        width: 100%;
+        max-width: none;
+    }
+
+    .website-cover img {
+        width: 100%;
+        height: 130px;
+        min-height: 0;
+        max-height: none;
+
+        object-fit: cover;
+        border-radius: 13px;
+    }
+
+    .rule-guide {
+        order: 3;
+        margin: 0;
+    }
+
+    .rule-guide-title {
+        margin: 0 0 8px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .rule-button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .rule-button {
+        width: 100%;
+        min-width: 0;
+        padding: 8px 5px;
+
+        border-radius: 9px;
+        font-size: 12px;
+    }
+
+    .rule-panel {
+        width: calc(100% - 28px);
+        margin: 10px auto 18px;
+        padding: 13px;
+        border-radius: 13px;
+    }
+
+    .rule-panel-header {
+        margin-bottom: 10px;
+    }
+
+    .rule-panel-header h3 {
+        font-size: 17px;
+    }
+
+    .rule-close-button {
+        width: 34px;
+        height: 34px;
+        font-size: 21px;
+    }
+}
