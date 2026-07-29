@@ -419,6 +419,18 @@ button:hover {
         transform 0.2s ease;
 }
 
+.link-button-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    flex-shrink:0;
+
+}
+
 .language-button:hover {
     background-color: #8f7661;
     color: #ffffff;
@@ -1030,16 +1042,17 @@ button {
 }
 
 .site-title-group h1 {
-    margin: 0 0 5px;
+    margin: 5 0 5px;
     color: #715b49;
-    font-size: 20px;
-    line-height: 1.25;
+    font-size: 14px;
+    line-height: 1;
+    
 }
 
 .site-name {
     margin: 0;
     color: #9a806c;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
